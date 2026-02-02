@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portfolio - Karen</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet"/>
+
+  <style>
+    #typing::after {
+  content: "|";
+  margin-left: 4px;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%, 50%, 100% { opacity: 1; }
+  25%, 75% { opacity: 0; }
+}
+
+    * {
+      margin: 0; 
+      padding: 0; 
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: #f8fafc;
+      color: #0f172a;
+    }
+
+    /* Navbar */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255,255,255,0.9);
+      backdrop-filter: blur(8px);
+      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    }
+
+    .nav-container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .brand {
+      font-weight: 700;
+      font-size: 20px;
+      color: #2563eb;
+      text-decoration: none;
+    }
+
+    .nav-links a {
+      margin-left: 20px;
+      text-decoration: none;
+      font-weight: 600;
+      color: #334155;
+    }
+
+    .nav-links a:hover {
+      color: #2563eb;
+    }
+
+    /* Hero */
+    .hero-section {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 40px 20px;
+      background: linear-gradient(135deg, #6366f1, #22d3ee);
+      color: white;
+    }
+
+    .hero-section h1 {
+      font-size: 42px;
+      margin-bottom: 10px;
+    }
+
+    .hero-section span {
+      color: #fef3c7;
+    }
+
+    .hero-section p {
+      font-size: 18px;
+      opacity: 0.9;
+    }
+
+ .hero-flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;              /* jarak antara teks & foto */
+  padding-top: 120px;    /* jarak dari atas layar */
+}
+
+/* Hero */
+.hero-section {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;     /* tetep vertikal */
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 120px 20px 80px;  /* atas, kiri-kanan, bawah */
+  background: linear-gradient(135deg, #6366f1, #22d3ee);
+  color: white;
+}
+
+.hero-section h1 {
+  font-size: 42px;
+  margin-bottom: 12px;       /* jarak ke subtitle */
+}
+
+.hero-section p {
+  font-size: 18px;
+  opacity: 0.9;
+  margin-bottom: 20px;      /* jarak ke tombol */
+}
+
+.btn {
+  margin-bottom: 24px;      /* jarak tombol ke foto */
+  padding: 12px 26px;
+  background: white;
+  color: #2563eb;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 700;
+  transition: 0.2s ease;
+}
+
+.hero-image {
+  margin-top: 12px;         /* jarak tambahan kalau masih mepet */
+}
+
+.hero-image img {
+  width: 140px;             /* ukuran foto */
+  height: 140px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 5px solid rgba(255,255,255,0.7);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.25);
+}
+
+
+
+    .btn {
+      margin-top: 25px;
+      padding: 12px 26px;
+      background: white;
+      color: #2563eb;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 700;
+      transition: 0.2s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    }
+
+    /* Section */
+    section {
+      max-width: 1100px;
+      margin: auto;
+      padding: 80px 20px;
+      text-align: center;
+    }
+
+    section h2 {
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+
+  section p {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: justify;
+  line-height: 1.7;        /* jarak antar baris, biar enak dibaca */
+}
+
+
+    /* Skills */
+    .skills-grid {
+      margin-top: 30px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+    }
+
+    .skill-card {
+      padding: 10px 18px;
+      background: #2563eb;
+      color: white;
+      border-radius: 999px;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    /* Projects */
+    .projects-grid {
+      margin-top: 30px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+    }
+
+    .project-card {
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+      transition: 0.2s ease;
+      text-align: left;
+    }
+
+    .project-card:hover {
+      transform: translateY(-6px);
+    }
+
+    .project-card img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+    }
+
+    .project-card .content {
+      padding: 15px;
+    }
+
+    /* Contact */
+    .contact-box {
+      background: #0f172a;
+      color: white;
+      padding: 40px;
+      border-radius: 16px;
+      max-width: 700px;
+      margin: auto;
+    }
+
+    /* Footer */
+    footer {
+      background: #020617;
+      color: #94a3b8;
+      text-align: center;
+      padding: 20px;
+      margin-top: 60px;
+    }
+
+    /* Responsive */
+    @media(max-width: 600px) {
+      .hero-section h1 {
+        font-size: 32px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav>
+    <div class="nav-container">
+      <a href="#home" class="brand">Karen</a>
+      <div class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+<header id="home" class="hero-section hero-flex">
+  <div class="hero-text">
+    <h1>Hello, I'm <span id="typing"></span></h1>
+    <p>Data Enthusiast | BI & Analytics | Web Portfolio</p>
+    <a href="#projects" class="btn">View My Work</a>
+  </div>
+
+  <div class="hero-image">
+    <img src="d:\profile.jpg alt="Foto Karen">
+  </div>
+</header>
+
+
+  <!-- About -->
+  <section id="about">
+    <h2>About Me</h2>
+    <p>
+
+I’m a 6th-semester Information Systems student at BINUS University specializing in Business Intelligence, transforming complex data into strategic insights that drive smarter decisions. I have a strong interest in data analysis, big data, business intelligence, UI/UX, programming, system analysis, and business analysis. I’m skilled in SQL, Python, Excel, and data visualization tools, and I’m continuously expanding my analytical capabilities through BI-focused projects and real-world case studies. I can describe myself as a fast learner, hardworking and diligent person. 
+This is my portofolio website that showcases my skills and projects in data analysis and business intelligence.
+    </p>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skills-grid">
+      <div class="skill-card">HTML</div>
+      <div class="skill-card">CSS</div>
+      <div class="skill-card">JavaScript</div>
+      <div class="skill-card">Java</div>
+      <div class="skill-card">Power BI</div>
+      <div class="skill-card">Tableau</div>
+      <div class="skill-card">SQL</div>
+      <div class="skill-card">Excel</div>
+      <div class="skill-card">Python</div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="projects-grid">
+      <div class="project-card">
+      <iframe 
+        src="https://app.powerbi.com/view?r=eyJrIjoiNmNlODk5ZWEtZjRkOS00MzQzLTkxNjktYmRlMjc0YmNkYzczIiwidCI6IjM0ODViOTYzLTgyYmEtNGE2Zi04MTBmLWI1Y2MyMjZmZjg5OCIsImMiOjEwfQ%3D%3D"></iframe>
+        <allowFullScreen="true">
+        <div class="content">
+          <h3>PowerBI Dashboard</h3>
+          <p>Dashboard menggunakan aplikasi Power BI untuk visualisasi data/p>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <img src="c:\Users\DELL\OneDrive\Pictures\Screenshots\Screenshot 2026-02-01 150343.png" alt="Project 2">
+        <a href="https://sites.google.com/view/karensampouw/home" target="_blank">Lihat Portfolio</a>
+        <div class="content">
+          <h3>Portfolio Website</h3>
+          <p>Website portfolio responsif dengan HTML, CSS, dan JavaScript.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <h2>Contact</h2>
+    <div class="contact-box">
+   <p>Email: <a href="mailto:k4r3nsampouw@gmail.com">k4r3nsampouw@gmail.com</a></p>
+
+<p>LinkedIn: 
+  <a href="https://www.linkedin.com/in/karensampouw" target="_blank">
+    linkedin.com/in/karensampouw
+  </a>
+</p>
+
+<p>Instagram: 
+  <a href="https://www.instagram.com/karen_sampouw" target="_blank">
+    instagram.com/karen_sampouw
+  </a>
+</p>
+
+    </div>
+  </section>
+
+  <footer>
+    © 2026 Karen Sampouw — Portfolio Website
+  </footer>
+
+  <script>
+    // (opsional) efek kecil pas klik nav
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', () => {
+        console.log("Navigating...");
+      });
+    });
+  </script>
+<script>
+  const text = "Karen";
+  let index = 0;
+  const speed = 120; // makin kecil makin cepet
+
+  function typeEffect() {
+    if (index < text.length) {
+      document.getElementById("typing").innerHTML += text.charAt(index);
+      index++;
+      setTimeout(typeEffect, speed);
+    }
+  }
+
+  // mulai animasi pas page kebuka
+  window.onload = typeEffect;
+</script>
+
+</body>
+</html>
